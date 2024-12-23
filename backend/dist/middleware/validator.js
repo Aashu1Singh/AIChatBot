@@ -13,13 +13,16 @@ export const validate = (validations) => {
         next();
     };
 };
-const signupValidator = [
-    body("name").trim().notEmpty().withMessage("Name is required"),
+const loginValidator = [
     body("email").trim().isEmail().withMessage("Email is required"),
     body("password")
         .trim()
         .isLength({ min: 5 })
         .withMessage("Passoword is required"),
 ];
-export { signupValidator };
+const signupValidator = [
+    body("name").trim().notEmpty().withMessage("Name is required"),
+    ...loginValidator,
+];
+export { signupValidator, loginValidator };
 //# sourceMappingURL=validator.js.map
