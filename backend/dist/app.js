@@ -4,6 +4,6 @@ import appRouter from "./routes/index.js";
 config();
 const app = express();
 app.use(express.json());
-app.use("/", appRouter);
+app.use("/api", appRouter);
 export default app;
 //# sourceMappingURL=app.js.map

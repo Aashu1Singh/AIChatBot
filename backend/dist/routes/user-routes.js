@@ -1,6 +1,8 @@
 import express from "express";
-import { getAllUser } from "../controllers/user-controller.js";
+import { getAllUser, signupUser } from "../controllers/user-controller.js";
+import { signupValidator, validate } from "../middleware/validator.js";
 const userRouter = express.Router();
-userRouter.get("/", getAllUser);
+userRouter.route("/").get(getAllUser);
+userRouter.route("/signup").post(validate(signupValidator), signupUser);
 export default userRouter;
 //# sourceMappingURL=user-routes.js.map
