@@ -7,6 +7,7 @@ logs
 .env*
 **/.env
 backend/.env
+.next
 
 node_modules
 bower_components
