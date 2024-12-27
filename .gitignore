@@ -12,6 +12,7 @@ backend/.env
 node_modules
 bower_components
 
+backend/dist
 *.sublime*
 
 psd

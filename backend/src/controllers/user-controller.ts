@@ -81,7 +81,8 @@ async function loginUser(req: Request, res: Response) {
     });
 
     const token = createToken(findUser._id.toString(), findUser.email, "7d");
-
+    console.log("token ", token);
+    
     const expires = new Date();
     expires.setDate(expires.getDate() + 7);
 
